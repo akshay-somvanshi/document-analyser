@@ -1,5 +1,5 @@
 import { useState } from "react";
-import uploadFile from "./uploadFile"
+import uploadFile from "./uploadFile.jsx"
 
 export default function Main() {
     const [selectedFile, setSelectedFile] = useState(null)
@@ -15,11 +15,6 @@ export default function Main() {
         }
 
         const res = uploadFile(file)
-        if (res) {
-            console.log("Success", res)
-        } else {
-            console.log("Fail")
-        }
     }
 
     return (
