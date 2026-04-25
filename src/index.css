@@ -33,7 +33,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #9ca3af;
-    --text-h: #f3f4f6;
+    --text-h: #08255f;
     --bg: #16171d;
     --border: #2e303a;
     --code-bg: #1f2028;
@@ -52,6 +52,7 @@
 
 body {
   margin: 0;
+  background-color: #dbdbba;
 }
 
 #root {
@@ -77,20 +78,24 @@ h1 {
   font-size: 56px;
   letter-spacing: -1.68px;
   margin: 32px 0;
+
   @media (max-width: 1024px) {
     font-size: 36px;
     margin: 20px 0;
   }
 }
+
 h2 {
   font-size: 24px;
   line-height: 118%;
   letter-spacing: -0.24px;
   margin: 0 0 8px;
+
   @media (max-width: 1024px) {
     font-size: 20px;
   }
 }
+
 p {
   margin: 0;
 }
@@ -108,4 +113,50 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+.mainHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+  height: 80px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+}
+
+.mainHeader>img {
+  width: 50px;
+  margin-left: 30px;
+}
+
+main {
+  padding: 30px 30px 10px;
+}
+
+.summarise-form {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  height: 38px;
+}
+
+.summarise-form>input {
+  border-radius: 6px;
+  border: 1px solid #D1D5DB;
+  padding: 9px 13px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  flex-grow: 1;
+  min-width: 150px;
+  max-width: 400px;
+}
+
+.summarise-form>button {
+  font-family: Inter, sans-serif;
+  border-radius: 6px;
+  border: none;
+  background-color: #141413;
+  color: #FAFAF8;
+  width: 150px;
+  font-size: 0.875rem;
+  font-weight: 500;
 }
