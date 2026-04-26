@@ -58,7 +58,7 @@ async def getDocumentSummary():
     try:
         response = (
             supabase.table("documents")
-            .select("file_name, summary")
+            .select("id, file_name, summary")
             .execute()
         )
         return {"documents": response.data}
